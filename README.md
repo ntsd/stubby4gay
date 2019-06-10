@@ -2,30 +2,30 @@
 [![VersionEye Dependency status][versioneye-badge]][versioneye-link]
 [![codecov][codecov-badge]][codecov-link]
 [![Maven Central][maven-badge]][maven-link]
-[![Stackoverflow stubby4j][stackoverflow-badge]][stackoverflow-link]
-[![Chat on gitter about stubby4j][chat-badge]][chat-link]
+[![Stackoverflow stubby4gay][stackoverflow-badge]][stackoverflow-link]
+[![Chat on gitter about stubby4gay][chat-badge]][chat-link]
 [![License][license-badge]][license-link]
 
 
 [![stubb4j][logo-badge]][logo-link]
 
 
-A highly flexible and configurable tool for testing interactions of SOA applications with web services (REST, SOAP, WSDL etc.) over HTTP(S) protocol. It is an actual HTTP server (stubby4j uses embedded Jetty) that allows stubbing of external systems with ease for integration, contract & behavior testing. Please refer to [Key features](#key-features) for more information
+A highly flexible and configurable tool for testing interactions of SOA applications with web services (REST, SOAP, WSDL etc.) over HTTP(S) protocol. It is an actual HTTP server (stubby4gay uses embedded Jetty) that allows stubbing of external systems with ease for integration, contract & behavior testing. Please refer to [Key features](#key-features) for more information
 
 #### Why the word "stubby"?
 It is a stub HTTP server after all, hence the "stubby". Also, in Australian slang "stubby" means _beer bottle_
 
-## User manual for stubby4j v6.0.2
+## User manual for stubby4gay v6.0.2
 ### Table of contents
 
 * [Quick start example](#quick-start-example)
 * [Key features](#key-features)
-* [Why would a developer use stubby4j](#why-would-a-developer-use-stubby4j)
-* [Why would a QA use stubby4j](#why-would-a-qa-use-stubby4j)
+* [Why would a developer use stubby4gay](#why-would-a-developer-use-stubby4gay)
+* [Why would a QA use stubby4gay](#why-would-a-qa-use-stubby4gay)
 * [Building](#building)
 * [Third-party dependencies](#third-party-dependencies)
-* [Adding stubby4j to your project](#adding-stubby4j-to-your-project)
-   * [Installing stubby4j to local .m2 repository](#installing-stubby4j-to-local-m2-repository)
+* [Adding stubby4gay to your project](#adding-stubby4gay-to-your-project)
+   * [Installing stubby4gay to local .m2 repository](#installing-stubby4gay-to-local-m2-repository)
 * [Command-line switches](#command-line-switches)
 * [Endpoint configuration HOWTO](#endpoint-configuration-howto)
    * [Stub/Feature](#stubfeature)
@@ -58,9 +58,9 @@ It is a stub HTTP server after all, hence the "stubby". Also, in Australian slan
 
 ## Quick start example
 
-This section explains how to get stubby4j up and running using a very simple example "Hello, World", without building stubby4j from source locally using Gradle. 
+This section explains how to get stubby4gay up and running using a very simple example "Hello, World", without building stubby4gay from source locally using Gradle.
 
-#### Minimum system requirements to run stubby4j archives hosted on [Maven Central][maven-link]
+#### Minimum system requirements to run stubby4gay archives hosted on [Maven Central][maven-link]
 
 * version >= 4.0.0:  Oracle JRE v1.8.0_60
 * version >= 3.0.0:  Oracle JRE v1.7.0_76
@@ -69,7 +69,7 @@ This section explains how to get stubby4j up and running using a very simple exa
 
 #### Setup
 
-* Download the [latest stubby4j version][maven-link] (the JAR archive).
+* Download the [latest stubby4gay version][maven-link] (the JAR archive).
 * Create the following local YAML file: 
 ```yaml
 -  request:
@@ -82,9 +82,9 @@ This section explains how to get stubby4j up and running using a very simple exa
          content-type: application/json
       body: Hello World!
 ```
-* Execute the downloaded stubby JAR using command `java -jar stubby4j-x.x.xx.jar -d <PATH_TO_YOUR_CREATED_LOCAL_YAML_FILE>`
+* Execute the downloaded stubby JAR using command `java -jar stubby4gay-x.x.xx.jar -d <PATH_TO_YOUR_CREATED_LOCAL_YAML_FILE>`
 * Navigate to `http://localhost:8882/hello-world` to get the stubbed response "Hello World!"
-* Navigate to stubby4j admin portal at `http://localhost:8889/status` to see what has been stubbed & other useful data
+* Navigate to stubby4gay admin portal at `http://localhost:8889/status` to see what has been stubbed & other useful data
 
 That's it!
 
@@ -99,9 +99,9 @@ For more information and more complex examples, please dive into the rest of doc
 * Dynamic flows. Multiple stubbed responses on the same stubbed URI to test multiple application flows
 * Fault injection, where after X good responses on the same URI you get a bad one
 * Serve binary files as stubbed response content (images, PDFs. etc.)
-* Embed stubby4j to create a web service SANDBOX for your integration test suite
+* Embed stubby4gay to create a web service SANDBOX for your integration test suite
 
-## Why would a developer use stubby4j?
+## Why would a developer use stubby4gay?
 #### You want to:
 * Simulate responses from real server and don't care (or cannot) to go over the network
 * Third party web service your application suppose to contract with is not ready yet
@@ -117,7 +117,7 @@ For more information and more complex examples, please dive into the rest of doc
 * Concentrate on the task at hand
 
 
-## Why would a QA use stubby4j?
+## Why would a QA use stubby4gay?
 * Specifiable mock responses to simulate page conditions without real data.
 * Ability to test polling mechanisms by stubbing a sequence of responses for the same URI
 * Easily swappable data config files to run different data sets and responses.
@@ -125,7 +125,7 @@ For more information and more complex examples, please dive into the rest of doc
 
 
 ## Building
-stubby4j is a multi-module Gradle project
+stubby4gay is a multi-module Gradle project
 
 Run `gradle` command to:
 * Clean
@@ -150,30 +150,30 @@ Run `gradle cobertura` command to:
 * slf4j-api:1.7.25
 
 
-## Adding stubby4j to your project
-The following are the stubby4j artifacts that are hosted on [Maven Central][maven-link]:
+## Adding stubby4gay to your project
+The following are the stubby4gay artifacts that are hosted on [Maven Central][maven-link]:
 
-* `stubby4j-x.x.x.jar` - an `uber` JAR containing all the 3rd-party deps
-* `stubby4j-x.x.x-no-dependencies.jar` - a `skinny` JAR containing no 3rd-party dependencies at all
-* `stubby4j-x.x.x-no-jetty.jar` - an `uber-ish` JAR containing all the 3rd-party deps __except__ Jetty binaries
-* `stubby4j-x.x.x-sources.jar`
-* `stubby4j-x.x.x-javadoc.jar`
+* `stubby4gay-x.x.x.jar` - an `uber` JAR containing all the 3rd-party deps
+* `stubby4gay-x.x.x-no-dependencies.jar` - a `skinny` JAR containing no 3rd-party dependencies at all
+* `stubby4gay-x.x.x-no-jetty.jar` - an `uber-ish` JAR containing all the 3rd-party deps __except__ Jetty binaries
+* `stubby4gay-x.x.x-sources.jar`
+* `stubby4gay-x.x.x-javadoc.jar`
 
 #### Gradle
 ```xml
-compile("io.github.ntsd.stubby4gay:6.0.2")
+compile("io.github.ntsd:stubby4gay:6.0.2")
 ```
 or by adding a `classifier` to the JAR name like `no-dependencies` or `no-jetty`, i.e.:
 
 ```xml
-compile("io.github.ntsd.stubby4gay:6.0.2:no-jetty")
+compile("io.github.ntsd:stubby4gay:6.0.2:no-jetty")
 ```
 
 #### Maven
 ```xml
 <dependency>
-    <groupId>io.github.azagniotov</groupId>
-    <artifactId>stubby4j</artifactId>
+    <groupId>io.github.ntsd</groupId>
+    <artifactId>stubby4gay</artifactId>
     <version>6.0.2</version>
 </dependency>
 ```
@@ -181,35 +181,35 @@ or by adding a `classifier` to the JAR name like `no-dependencies` or `no-jetty`
 
 ```xml
 <dependency>
-    <groupId>io.github.azagniotov</groupId>
-    <artifactId>stubby4j</artifactId>
+    <groupId>io.github.ntsd</groupId>
+    <artifactId>stubby4gay</artifactId>
     <version>6.0.2</version>
     <classifier>no-dependencies</classifier>
 </dependency>
 ```
 
-### Installing stubby4j to local .m2 repository
+### Installing stubby4gay to local .m2 repository
 
 Run `gradle install` command to:
 
-* Install `stubby4j-6.0.2-SNAPSHOT*.jar` to local `~/.m2/repository`
-* All the artifacts will be installed under `~/.m2/repository/{groupId}/{artifactId}/{version}/`, e.g.: `~/.m2/repository/io/github/ntsd.stubby4gay/5.2.1-SNAPSHOT/`
+* Install `stubby4gay-6.0.2-SNAPSHOT*.jar` to local `~/.m2/repository`
+* All the artifacts will be installed under `~/.m2/repository/{groupId}/{artifactId}/{version}/`, e.g.: `~/.m2/repository/io/github/ntsd/stubby4gay/5.2.1-SNAPSHOT/`
 
-Now you can include locally installed stubby4j `SNAPSHOT` artifacts in your project:
+Now you can include locally installed stubby4gay `SNAPSHOT` artifacts in your project:
 ```xml
-compile("io.github.ntsd.stubby4gay:6.0.2-SNAPSHOT")
+compile("io.github.ntsd:stubby4gay:6.0.2-SNAPSHOT")
 ```
 or by adding a `classifier` to the JAR name like `no-dependencie`s or `no-jetty`, i.e.:
 
 ```xml
-compile("io.github.ntsd.stubby4gay:6.0.2-SNAPSHOT:no-jetty")
+compile("io.github.ntsd:stubby4gay:6.0.2-SNAPSHOT:no-jetty")
 ```
 
 
 ## Command-line switches
 ```
 usage:
-       java -jar stubby4j-x.x.xx.jar [-a <arg>] [-d <arg>] [-da] [-ds]
+       java -jar stubby4gay-x.x.xx.jar [-a <arg>] [-d <arg>] [-da] [-ds]
        [-h] [-k <arg>] [-l <arg>] [-m] [-o] [-p <arg>] [-s <arg>] [-t
        <arg>] [-v] [-w]
  -a,--admin <arg>             Port for admin portal. Defaults to 8889.
@@ -562,7 +562,7 @@ A demonstration using regular expressions:
 * please note, if both `file` & `post` properties are supplied, the `file` takes precedence & replaces `post` with the contents from the provided file. 
 * if `--watch` command-line argument was supplied during startup, then any modifications to the supplied local file in `file` (e.g. `file: ../json/post.payload.json`) will cause the whole configuration to be reloaded.
 * if the local file could not be loaded for whatever reason (ie.: not found), stubby falls back to `post` for matching.
-* please keep in mind: ```SnakeYAML``` library (used by stubby4j) parser ruins multi-line strings by not preserving system line breaks. If `file` property is stubbed, the file content is loaded as-is, in other words - it does not go through SnakeYAML parser. Therefore it's better to load big POST content for request using `file` property. Keep in mind, stubby4j stub server is dumb and does not use smart matching mechanism (i.e.: don't match line separators or don't match any white space characters) - whatever you stubbed, must be POSTed exactly for successful match. Alternatively you can consider using regular expression in `post`
+* please keep in mind: ```SnakeYAML``` library (used by stubby4gay) parser ruins multi-line strings by not preserving system line breaks. If `file` property is stubbed, the file content is loaded as-is, in other words - it does not go through SnakeYAML parser. Therefore it's better to load big POST content for request using `file` property. Keep in mind, stubby4gay stub server is dumb and does not use smart matching mechanism (i.e.: don't match line separators or don't match any white space characters) - whatever you stubbed, must be POSTed exactly for successful match. Alternatively you can consider using regular expression in `post`
 
 ```yaml
 -  request:
@@ -808,7 +808,7 @@ response:
 * if `--watch` command-line argument was supplied during startup, then any modifications to the supplied local file in `file` (e.g. `file: ../json/response.json`) will cause the whole configuration to be reloaded.
 * if the file could not be loaded, stubby falls back to the value stubbed in `body`
 * if `body` was not stubbed, an empty string is returned by default
-* it can be ascii of binary file (PDF, images, etc.). Please keep in mind, that file is preloaded upon stubby4j startup and its content is kept as a byte array in memory. In other words, response files are not read from the disk on demand, but preloaded.
+* it can be ascii of binary file (PDF, images, etc.). Please keep in mind, that file is preloaded upon stubby4gay startup and its content is kept as a byte array in memory. In other words, response files are not read from the disk on demand, but preloaded.
 
 
 ```yaml
@@ -961,7 +961,7 @@ Another example demonstrating the usage of tokens from the matched regex groups
 After successful HTTP request verification, if your `body` or contents of local file from `file` contain tokens - the tokens will be replaced just before rendering HTTP response.
 
 #### Troubleshooting
-* Make sure that the regex you used in your stubby4j configuration actually does what it suppose to do. Validate that it works before using it in stubby4j
+* Make sure that the regex you used in your stubby4gay configuration actually does what it suppose to do. Validate that it works before using it in stubby4gay
 * Make sure that the regex has capturing groups for the parts of regex you want to capture as token values. In other words, make sure that you did not forget the parenthesis within your regex if your token IDs start from `1`
 * Make sure that you are using token ID zero, when wanting to use __full__ regex match as the token value
 * Make sure that the token names you used in your template are correct: check that property name is correct, capturing group IDs, token ID of the __full__ match, the `<% ` and ` %>`
@@ -1002,7 +1002,7 @@ In the above example, stubby will record HTTP response received after submitting
 
 ## Performance optimization index
 
-stubby4j uses a number of techniques to optimize evaluation of stubs
+stubby4gay uses a number of techniques to optimize evaluation of stubs
 
 #### Regex pattern pre-compilation
 
@@ -1057,7 +1057,7 @@ Performing a `GET` request on `localhost:8889/<id>` will return the YAML object 
 
 #### Refreshing stubbed data via an endpoint
 
-If for some reason you do not want/cannot/not able to use `--watch` flag when starting stubby4j (or cannot restart stubby),
+If for some reason you do not want/cannot/not able to use `--watch` flag when starting stubby4gay (or cannot restart stubby),
 you can submit `GET` request to `localhost:8889/refresh` (or load it in a browser) in order to refresh the stubbed data.
 
 #### Updating existing endpoints
@@ -1149,7 +1149,7 @@ Send a `DELETE` request to `localhost:8889`
 
 #### JSON support
 
-JSON is a subset of YAML 1.2, SnakeYAML (Third-party library used by stubby4j for YAML & JSON parsing) implements YAML 1.1 at the moment. It means that not all the JSON documents can be parsed. Just give it a go.
+JSON is a subset of YAML 1.2, SnakeYAML (Third-party library used by stubby4gay for YAML & JSON parsing) implements YAML 1.1 at the moment. It means that not all the JSON documents can be parsed. Just give it a go.
 
 #### JSON (file or POST/PUT)
 
@@ -1236,7 +1236,7 @@ For instance, the following will match any `POST` request to the root url:
 
 The request could have any headers and any post body it wants. It will match the above.
 
-Pseudocode ([StubRepository#matchStub](main/java/io/github/ntsd.stubby4gay/stubs/StubRepository.java#L142)):
+Pseudocode ([StubRepository#matchStub](main/java/io/github/ntsd/stubby4gay/stubs/StubRepository.java#L142)):
 
 ```
     if (<incoming request>.url found in <previous matched cache>) {
@@ -1259,7 +1259,7 @@ Pseudocode ([StubRepository#matchStub](main/java/io/github/ntsd.stubby4gay/stubs
 
 ## Programmatic API
 
-You can start-up and manage stubby4j with the help of [StubbyClient](main/java/io/github/ntsd.stubby4gay/client/StubbyClient.java)
+You can start-up and manage stubby4gay with the help of [StubbyClient](main/java/io/github/ntsd/stubby4gay/client/StubbyClient.java)
 
 ## Change log
 
@@ -1270,15 +1270,15 @@ See CHANGELOG for details
 * Scenarios where multiple endpoints correlate with each other based on the scenario. Useful in e2e testing where system brought to a certain state (maybe?)
 
 ## Authors
-A number of people have contributed directly to stubby4j by writing
+A number of people have contributed directly to stubby4gay by writing
 documentation or developing software.
 
-1. Alexander Zagniotov <azagniotov@gmail.com>
+1. Alexander Zagniotov <ntsd@gmail.com>
 2. Eric Mrak <enmrak@gmail.com>
 
 
 ## Kudos
-A number of people have contributed to stubby4j by reporting problems, suggesting improvements or submitting changes. Special thanks fly out to the following **Ninjas** for their help, support and feedback
+A number of people have contributed to stubby4gay by reporting problems, suggesting improvements or submitting changes. Special thanks fly out to the following **Ninjas** for their help, support and feedback
 
 * Isa Goksu
 * Eric Mrak
@@ -1304,26 +1304,26 @@ MIT. See LICENSE for details
 
 <!-- references -->
 
-[travis-badge]: https://img.shields.io/travis/ntsd.stubby4gay/master.svg
-[travis-link]: http://travis-ci.org/ntsd.stubby4gay
+[travis-badge]: https://img.shields.io/travis/ntsd/stubby4gay/master.svg
+[travis-link]: http://travis-ci.org/ntsd/stubby4gay
 
 [versioneye-badge]: https://img.shields.io/versioneye/d/ruby/rails.svg
 [versioneye-link]: https://www.versioneye.com/user/projects/5812971fd33a710043fba01f
 
-[codecov-badge]: https://codecov.io/gh/ntsd.stubby4gay/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/ntsd.stubby4gay
+[codecov-badge]: https://codecov.io/gh/ntsd/stubby4gay/branch/master/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/ntsd/stubby4gay
 
-[maven-badge]: https://img.shields.io/maven-central/v/io.github.ntsd.stubby4gay.svg?style=flat&label=maven-central
-[maven-link]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.github.azagniotov%22%20AND%20a%3A%22stubby4j%22
+[maven-badge]: https://img.shields.io/maven-central/v/io.github.ntsd/stubby4gay.svg?style=flat&label=maven-central
+[maven-link]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.github.ntsd%22%20AND%20a%3A%22stubby4gay%22
 
-[stackoverflow-badge]: https://img.shields.io/badge/stackoverflow-stubby4j-brightgreen.svg?style=flat
-[stackoverflow-link]: http://stackoverflow.com/questions/tagged/stubby4j
+[stackoverflow-badge]: https://img.shields.io/badge/stackoverflow-stubby4gay-brightgreen.svg?style=flat
+[stackoverflow-link]: http://stackoverflow.com/questions/tagged/stubby4gay
 
 [chat-badge]: https://badges.gitter.im/Join%20Chat.svg
-[chat-link]: https://gitter.im/stubby4j/Lobby
+[chat-link]: https://gitter.im/stubby4gay/Lobby
 
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-link]: http://badges.mit-license.org
 
-[logo-badge]: https://cdn.rawgit.com/ntsd.stubby4gay/master/assets/stubby-logo-duke-hiding.svg
-[logo-link]: https://github.com/ntsd.stubby4gay
+[logo-badge]: https://cdn.rawgit.com/ntsd/stubby4gay/master/assets/stubby-logo-duke-hiding.svg
+[logo-link]: https://github.com/ntsd/stubby4gay

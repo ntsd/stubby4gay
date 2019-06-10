@@ -63,7 +63,7 @@ public final class Main {
         }
 
         verifyYamlDataProvided();
-        startStubby4jUsingCommandLineArgs();
+        startstubby4gayUsingCommandLineArgs();
     }
 
     private static void parseCommandLineArgs(final String[] args) {
@@ -110,7 +110,7 @@ public final class Main {
         throw new IllegalArgumentException(msg);
     }
 
-    private static void startStubby4jUsingCommandLineArgs() {
+    private static void startstubby4gayUsingCommandLineArgs() {
         try {
 
             final long initialStart = System.currentTimeMillis();

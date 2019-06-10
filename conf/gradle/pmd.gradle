@@ -14,7 +14,7 @@ pmd {
    ruleSetFiles = files("$rootDir/conf/pmd/pmd-rulesets.xml")
 }
 pmdMain {
-   excludes = ["io/github/azagniotov/cli/**/*.java",
+   excludes = ["io/github/ntsd/cli/**/*.java",
                "**/ConsoleUtils.java",
                "**/FakeX509TrustManager.java",
                "**/*Scanner.java",

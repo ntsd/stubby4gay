@@ -10,7 +10,7 @@
 
 #### 6.0.0
 
-* Pull request #87 - Added support for UUID property & ability to get/delete/update stub by UUID (https://github.com/azagniotov)
+* Pull request #87 - Added support for UUID property & ability to get/delete/update stub by UUID (https://github.com/ntsd)
 * Displaying UUID value in popup dialogs in Admin console when `[view]` YAML source button is clicked
 * Revisited HTTP response codes of Admin portal APIs that manage stubs (delete, get & update APIs)
 * Upgraded from Jetty `9.4.8.v20171121` to `9.4.9.v20180320`
@@ -48,7 +48,7 @@
 #### 4.0.5
 * Pull request #63 - Dynamic token replacement is also applied to stubbed response headers
 * Upgraded from Jetty `9.3.13.v20161014` to `9.4.0.v20161208`
-* Added dependency on https://github.com/azagniotov/collection-type-safe-converter
+* Added dependency on https://github.com/ntsd/collection-type-safe-converter
 * 'Builder' sub-project got merged into the 'Main' sub-project
 
 #### 4.0.4
@@ -57,13 +57,13 @@
 * Issue #61 - During record & play, the stubbed query params were sent with recording request instead of the actual request query params
 
 #### 4.0.3
-* Optimized the stub matching algorithm by caching the previous matches [StubRepository#matchStub](https://github.com/ntsd.stubby4gay/blob/master/main/java/io/github/ntsd.stubby4gay/database/StubRepository.java)
-* Suppressed Jetty's default [ErrorHandler](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/server/handler/ErrorHandler.html) with a custom [JsonErrorHandler](main/java/io/github/ntsd.stubby4gay/handlers/JsonErrorHandler.java) to send errors in JSON format
+* Optimized the stub matching algorithm by caching the previous matches [StubRepository#matchStub](https://github.com/ntsd/stubby4gay/blob/master/main/java/io/github/ntsd/stubby4gay/database/StubRepository.java)
+* Suppressed Jetty's default [ErrorHandler](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/server/handler/ErrorHandler.html) with a custom [JsonErrorHandler](main/java/io/github/ntsd/stubby4gay/handlers/JsonErrorHandler.java) to send errors in JSON format
 * Got rid off repackaged classes from Apache Commons in favor of Java 8 APIs
 * Using Java NIO for file operations
 
 #### 4.0.2
-* Log to terminal why a request fails to match https://github.com/soundcloud/stubby4j/commit/5901710efd31653a05804ebec62f67184c212832
+* Log to terminal why a request fails to match https://github.com/soundcloud/stubby4gay/commit/5901710efd31653a05804ebec62f67184c212832
 * Square brackets were not escaped as literals for regular expression in Json POST [BUG]
 * Pre-compiling & caching stubbed regex patterns upon parsing YAML stub configuration
 
@@ -76,7 +76,7 @@
 * Upgraded from Jetty `9.2.10.v20150310` to `9.3.12.v20160915`
 * Updated Docker config
 * Renamed project root package from `by.stub` to `io.github.ntsd.stubby4gay`
-* Renamed Maven Central group ID from `by.stub` to `io.github.azagniotov`
+* Renamed Maven Central group ID from `by.stub` to `io.github.ntsd`
 * Issue #55 - When running in `--debug`, dumping `HttpServletRequest` parameters, would implicitly call `ServletRequest#getInputStream()`
 * Issue #56 - Requests with query parameters values containing white spaces
 * Pull request #57 - `StubbyClient` starts Jetty with `-m` to mute the console logger, but it wasn't actually muted 
@@ -162,7 +162,7 @@
 * Whitespace was not allowed between the `<% ` & ` %>` and what's inside when specifying template tokens for dynamic token replacement in stubbed response [BUG]
 * Regex matches were stored against incorrect token names for `query` and `headers` regexes [BUG]
 * Renamed command line arg `--ssl` to `--tls` to reduce the confusion when having another command line arg that starts with letter `s`, like `--stubs` [ENHANCEMENT]
-* Added command line arg `--version` that prints current stubby4j version to the console [ENHANCEMENT]
+* Added command line arg `--version` that prints current stubby4gay version to the console [ENHANCEMENT]
 
 #### 2.0.13
 * Dynamic token replacement in stubbed response, by leveraging regex capturing groups as token values during HTTP request verification [FEATURE]

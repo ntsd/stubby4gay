@@ -16,8 +16,8 @@ project.ext.jettylessDependencies = configurations.compile.resolve().findAll { f
 
 project.ext.projectManifest = manifest {
     def manifestClasspath = project.ext.dependenciesWithJetty.collect { it.getName() }.join(',')
-    attributes 'Main-Class': 'io.github.azagniotov.stubby4gay.Main',
-            'Package': 'io.github.azagniotov.stubby4gay',
+    attributes 'Main-Class': 'io.github.ntsd.stubby4gay.Main',
+            'Package': 'io.github.ntsd.stubby4gay',
             'Class-Path': manifestClasspath,
             'Implementation-Title': "${stubbyProjectName}",
             'Implementation-Version': "${version}",
@@ -30,8 +30,8 @@ project.ext.projectManifest = manifest {
 
 project.ext.projectManifestNoJetty = manifest {
     def manifestClasspath = project.ext.jettylessDependencies.collect { it.getName() }.join(',')
-    attributes 'Main-Class': 'io.github.azagniotov.stubby4gay.Main',
-            'Package': 'io.github.azagniotov.stubby4gay',
+    attributes 'Main-Class': 'io.github.ntsd.stubby4gay.Main',
+            'Package': 'io.github.ntsd.stubby4gay',
             'Class-Path': manifestClasspath,
             'Implementation-Title': "${stubbyProjectName}",
             'Implementation-Version': "${version}",

@@ -44,8 +44,8 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static io.github.azagniotov.generics.TypeSafeConverter.asCheckedArrayList;
-import static io.github.azagniotov.generics.TypeSafeConverter.asCheckedLinkedHashMap;
+import static io.github.ntsd.generics.TypeSafeConverter.asCheckedArrayList;
+import static io.github.ntsd.generics.TypeSafeConverter.asCheckedLinkedHashMap;
 import static io.github.ntsd.stubby4gay.stubs.StubbableAuthorizationType.BASIC;
 import static io.github.ntsd.stubby4gay.stubs.StubbableAuthorizationType.BEARER;
 import static io.github.ntsd.stubby4gay.stubs.StubbableAuthorizationType.CUSTOM;

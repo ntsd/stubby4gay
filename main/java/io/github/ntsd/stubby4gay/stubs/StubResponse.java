@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.github.azagniotov.generics.TypeSafeConverter.asCheckedLinkedHashMap;
+import static io.github.ntsd.generics.TypeSafeConverter.asCheckedLinkedHashMap;
 import static io.github.ntsd.stubby4gay.utils.FileUtils.fileToBytes;
 import static io.github.ntsd.stubby4gay.utils.FileUtils.isFilePathContainTemplateTokens;
 import static io.github.ntsd.stubby4gay.utils.ObjectUtils.isNull;

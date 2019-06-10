@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.github.azagniotov.generics.TypeSafeConverter.as;
+import static io.github.ntsd.generics.TypeSafeConverter.as;
 
 public abstract class AbstractBuilder<T extends ReflectableStub> {
 

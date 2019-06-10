@@ -197,7 +197,7 @@ function ajaxToResourceClickHandler() {
 function requestErrorHandler(status, statusText, responseText, thisLink, parentTD, thisLinkHandlerFunction) {
    var status = parseInt(status);
    if (status === 0) {
-      alert("Could not contact the stubby4j backend when fetching resource:\n" + thisLink + "\n\nIs stubby4j app UP?");
+      alert("Could not contact the stubby4gay backend when fetching resource:\n" + thisLink + "\n\nIs stubby4gay app UP?");
    } else {
       alert("Error fetching resource:\n" + thisLink + "\n\nstatus: " + status + "\nstatusText: " + statusText + "\nresponseText: " + responseText);
    }
