@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import static io.github.ntsd.generics.TypeSafeConverter.asCheckedLinkedList;
+import static io.github.azagniotov.generics.TypeSafeConverter.asCheckedLinkedList;
 import static io.github.ntsd.stubby4gay.stubs.StubResponse.okResponse;
 
 

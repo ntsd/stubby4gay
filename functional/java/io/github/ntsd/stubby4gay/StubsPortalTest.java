@@ -29,7 +29,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import static com.google.common.truth.Truth.assertThat;
-import static io.github.ntsd.generics.TypeSafeConverter.asCheckedArrayList;
+import static io.github.azagniotov.generics.TypeSafeConverter.asCheckedArrayList;
 import static io.github.ntsd.stubby4gay.common.Common.HEADER_APPLICATION_JSON;
 import static io.github.ntsd.stubby4gay.common.Common.HEADER_APPLICATION_XML;
 
