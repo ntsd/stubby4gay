@@ -161,12 +161,12 @@ The following are the stubby4j artifacts that are hosted on [Maven Central][mave
 
 #### Gradle
 ```xml
-compile("io.github.azagniotov:stubby4j:6.0.2")
+compile("io.github.ntsd.stubby4gay:6.0.2")
 ```
 or by adding a `classifier` to the JAR name like `no-dependencies` or `no-jetty`, i.e.:
 
 ```xml
-compile("io.github.azagniotov:stubby4j:6.0.2:no-jetty")
+compile("io.github.ntsd.stubby4gay:6.0.2:no-jetty")
 ```
 
 #### Maven
@@ -193,16 +193,16 @@ or by adding a `classifier` to the JAR name like `no-dependencies` or `no-jetty`
 Run `gradle install` command to:
 
 * Install `stubby4j-6.0.2-SNAPSHOT*.jar` to local `~/.m2/repository`
-* All the artifacts will be installed under `~/.m2/repository/{groupId}/{artifactId}/{version}/`, e.g.: `~/.m2/repository/io/github/azagniotov/stubby4j/5.2.1-SNAPSHOT/`
+* All the artifacts will be installed under `~/.m2/repository/{groupId}/{artifactId}/{version}/`, e.g.: `~/.m2/repository/io/github/ntsd.stubby4gay/5.2.1-SNAPSHOT/`
 
 Now you can include locally installed stubby4j `SNAPSHOT` artifacts in your project:
 ```xml
-compile("io.github.azagniotov:stubby4j:6.0.2-SNAPSHOT")
+compile("io.github.ntsd.stubby4gay:6.0.2-SNAPSHOT")
 ```
 or by adding a `classifier` to the JAR name like `no-dependencie`s or `no-jetty`, i.e.:
 
 ```xml
-compile("io.github.azagniotov:stubby4j:6.0.2-SNAPSHOT:no-jetty")
+compile("io.github.ntsd.stubby4gay:6.0.2-SNAPSHOT:no-jetty")
 ```
 
 
@@ -1236,7 +1236,7 @@ For instance, the following will match any `POST` request to the root url:
 
 The request could have any headers and any post body it wants. It will match the above.
 
-Pseudocode ([StubRepository#matchStub](main/java/io/github/azagniotov/stubby4j/stubs/StubRepository.java#L142)):
+Pseudocode ([StubRepository#matchStub](main/java/io/github/ntsd.stubby4gay/stubs/StubRepository.java#L142)):
 
 ```
     if (<incoming request>.url found in <previous matched cache>) {
@@ -1259,7 +1259,7 @@ Pseudocode ([StubRepository#matchStub](main/java/io/github/azagniotov/stubby4j/s
 
 ## Programmatic API
 
-You can start-up and manage stubby4j with the help of [StubbyClient](main/java/io/github/azagniotov/stubby4j/client/StubbyClient.java)
+You can start-up and manage stubby4j with the help of [StubbyClient](main/java/io/github/ntsd.stubby4gay/client/StubbyClient.java)
 
 ## Change log
 
@@ -1304,16 +1304,16 @@ MIT. See LICENSE for details
 
 <!-- references -->
 
-[travis-badge]: https://img.shields.io/travis/azagniotov/stubby4j/master.svg
-[travis-link]: http://travis-ci.org/azagniotov/stubby4j
+[travis-badge]: https://img.shields.io/travis/ntsd.stubby4gay/master.svg
+[travis-link]: http://travis-ci.org/ntsd.stubby4gay
 
 [versioneye-badge]: https://img.shields.io/versioneye/d/ruby/rails.svg
 [versioneye-link]: https://www.versioneye.com/user/projects/5812971fd33a710043fba01f
 
-[codecov-badge]: https://codecov.io/gh/azagniotov/stubby4j/branch/master/graph/badge.svg
-[codecov-link]: https://codecov.io/gh/azagniotov/stubby4j
+[codecov-badge]: https://codecov.io/gh/ntsd.stubby4gay/branch/master/graph/badge.svg
+[codecov-link]: https://codecov.io/gh/ntsd.stubby4gay
 
-[maven-badge]: https://img.shields.io/maven-central/v/io.github.azagniotov/stubby4j.svg?style=flat&label=maven-central
+[maven-badge]: https://img.shields.io/maven-central/v/io.github.ntsd.stubby4gay.svg?style=flat&label=maven-central
 [maven-link]: http://search.maven.org/#search%7Cga%7C1%7Cg%3A%22io.github.azagniotov%22%20AND%20a%3A%22stubby4j%22
 
 [stackoverflow-badge]: https://img.shields.io/badge/stackoverflow-stubby4j-brightgreen.svg?style=flat
@@ -1325,5 +1325,5 @@ MIT. See LICENSE for details
 [license-badge]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-link]: http://badges.mit-license.org
 
-[logo-badge]: https://cdn.rawgit.com/azagniotov/stubby4j/master/assets/stubby-logo-duke-hiding.svg
-[logo-link]: https://github.com/azagniotov/stubby4j
+[logo-badge]: https://cdn.rawgit.com/ntsd.stubby4gay/master/assets/stubby-logo-duke-hiding.svg
+[logo-link]: https://github.com/ntsd.stubby4gay

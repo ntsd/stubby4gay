@@ -57,8 +57,8 @@
 * Issue #61 - During record & play, the stubbed query params were sent with recording request instead of the actual request query params
 
 #### 4.0.3
-* Optimized the stub matching algorithm by caching the previous matches [StubRepository#matchStub](https://github.com/azagniotov/stubby4j/blob/master/main/java/io/github/azagniotov/stubby4j/database/StubRepository.java)
-* Suppressed Jetty's default [ErrorHandler](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/server/handler/ErrorHandler.html) with a custom [JsonErrorHandler](main/java/io/github/azagniotov/stubby4j/handlers/JsonErrorHandler.java) to send errors in JSON format
+* Optimized the stub matching algorithm by caching the previous matches [StubRepository#matchStub](https://github.com/ntsd.stubby4gay/blob/master/main/java/io/github/ntsd.stubby4gay/database/StubRepository.java)
+* Suppressed Jetty's default [ErrorHandler](http://download.eclipse.org/jetty/9.3.12.v20160915/apidocs/org/eclipse/jetty/server/handler/ErrorHandler.html) with a custom [JsonErrorHandler](main/java/io/github/ntsd.stubby4gay/handlers/JsonErrorHandler.java) to send errors in JSON format
 * Got rid off repackaged classes from Apache Commons in favor of Java 8 APIs
 * Using Java NIO for file operations
 
@@ -75,7 +75,7 @@
 * Updated Gradle `build.gradle` to compile using Java v1.8
 * Upgraded from Jetty `9.2.10.v20150310` to `9.3.12.v20160915`
 * Updated Docker config
-* Renamed project root package from `by.stub` to `io.github.azagniotov.stubby4j`
+* Renamed project root package from `by.stub` to `io.github.ntsd.stubby4gay`
 * Renamed Maven Central group ID from `by.stub` to `io.github.azagniotov`
 * Issue #55 - When running in `--debug`, dumping `HttpServletRequest` parameters, would implicitly call `ServletRequest#getInputStream()`
 * Issue #56 - Requests with query parameters values containing white spaces

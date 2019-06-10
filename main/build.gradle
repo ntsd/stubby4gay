@@ -16,7 +16,7 @@ sourceSets {
 }
 
 // There are some tweaks done to this task by bmuschko/gradle-nexus-plugin that in addition to the expected
-// destination dir, it also installs stubby4j artifacts into ~/.m2/repository/stubby4j, which is wrong
+// destination dir, it also installs stubby4gay artifacts into ~/.m2/repository/stubby4gay, which is wrong
 task install(type: Upload, dependsOn: assemble, overwrite: true) {
     repositories.mavenInstaller {
         configuration = configurations.archives

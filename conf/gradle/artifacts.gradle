@@ -16,8 +16,8 @@ project.ext.jettylessDependencies = configurations.compile.resolve().findAll { f
 
 project.ext.projectManifest = manifest {
     def manifestClasspath = project.ext.dependenciesWithJetty.collect { it.getName() }.join(',')
-    attributes 'Main-Class': 'io.github.azagniotov.stubby4j.Main',
-            'Package': 'io.github.azagniotov.stubby4j',
+    attributes 'Main-Class': 'io.github.azagniotov.stubby4gay.Main',
+            'Package': 'io.github.azagniotov.stubby4gay',
             'Class-Path': manifestClasspath,
             'Implementation-Title': "${stubbyProjectName}",
             'Implementation-Version': "${version}",
@@ -30,8 +30,8 @@ project.ext.projectManifest = manifest {
 
 project.ext.projectManifestNoJetty = manifest {
     def manifestClasspath = project.ext.jettylessDependencies.collect { it.getName() }.join(',')
-    attributes 'Main-Class': 'io.github.azagniotov.stubby4j.Main',
-            'Package': 'io.github.azagniotov.stubby4j',
+    attributes 'Main-Class': 'io.github.azagniotov.stubby4gay.Main',
+            'Package': 'io.github.azagniotov.stubby4gay',
             'Class-Path': manifestClasspath,
             'Implementation-Title': "${stubbyProjectName}",
             'Implementation-Version': "${version}",
@@ -43,7 +43,7 @@ project.ext.projectManifestNoJetty = manifest {
 }
 
 jar {
-    description = 'Creates a shaded/uberjar/fatjar of stubby4j'
+    description = 'Creates a shaded/uberjar/fatjar of stubby4gay'
     archiveName = "${stubbyProjectName}-${version}.jar"
     destinationDir = file(project(':').libsDir.path)
     manifest = project.ext.projectManifest
@@ -61,7 +61,7 @@ jar {
 }
 
 task skinnyJar(type: Jar) {
-    description = 'Creates a skinny/no-dependencies of stubby4j'
+    description = 'Creates a skinny/no-dependencies of stubby4gay'
     baseName = "${stubbyProjectName}"
     version = "${version}"
     classifier = "no-dependencies"
@@ -76,7 +76,7 @@ task skinnyJar(type: Jar) {
 }
 
 task noJettyJar(type: Jar) {
-    description = 'Creates a shaded/uberjar/fatjar of stubby4j WITHOUT Jetty classes'
+    description = 'Creates a shaded/uberjar/fatjar of stubby4gay WITHOUT Jetty classes'
     baseName = "${stubbyProjectName}"
     version = "${version}"
     classifier = "no-jetty"
@@ -97,7 +97,7 @@ task noJettyJar(type: Jar) {
 }
 
 task javadocJar(type: Jar, overwrite: true) {
-    description = 'Creates a Javadoc JAR of stubby4j'
+    description = 'Creates a Javadoc JAR of stubby4gay'
     baseName = "${stubbyProjectName}"
     version = "${version}"
     classifier = "javadoc"
@@ -107,7 +107,7 @@ task javadocJar(type: Jar, overwrite: true) {
 }
 
 task sourceJar(type: Jar, overwrite: true) {
-    description = 'Creates a Source JAR of stubby4j'
+    description = 'Creates a Source JAR of stubby4gay'
     baseName = "${stubbyProjectName}"
     version = "${version}"
     classifier = "sources"

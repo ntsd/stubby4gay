@@ -7,13 +7,13 @@ pitest {
    reportDir = project(":main").reporting.baseDir.path + "/pitest/html"
    mainSourceSets = [project(':main').sourceSets.main]
    additionalMutableCodePaths = [configurations.mutableCodeBase.singleFile]
-   targetClasses = ['io.github.azagniotov.stubby4j.*']
-   excludedClasses = ['io.github.azagniotov.stubby4j.Main',
-                      'io.github.azagniotov.stubby4j.handlers.strategy.admin.*',
-                      'io.github.azagniotov.stubby4j.server.*',
-                      'io.github.azagniotov.stubby4j.filesystem.*',
-                      'io.github.azagniotov.stubby4j.http.*',
-                      'io.github.azagniotov.stubby4j.utils.ConsoleUtils']
+   targetClasses = ['io.github.azagniotov.stubby4gay.*']
+   excludedClasses = ['io.github.azagniotov.stubby4gay.Main',
+                      'io.github.azagniotov.stubby4gay.handlers.strategy.admin.*',
+                      'io.github.azagniotov.stubby4gay.server.*',
+                      'io.github.azagniotov.stubby4gay.filesystem.*',
+                      'io.github.azagniotov.stubby4gay.http.*',
+                      'io.github.azagniotov.stubby4gay.utils.ConsoleUtils']
    threads = 2
    outputFormats = ['HTML']
    failWhenNoMutations = false

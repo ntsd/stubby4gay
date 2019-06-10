@@ -26,7 +26,7 @@ task coberturaPrepare() {
 }
 
 task coberturaInstrument(dependsOn: ['classes', 'coberturaPrepare']) {
-    def root = "io/github/azagniotov/stubby4j"
+    def root = "io/github/azagniotov/stubby4gay"
     ext.outputDir = project(":main").buildDir.path + "/classes-instrumented"
     doLast {
         ant.coberturaInstrument(
@@ -34,7 +34,7 @@ task coberturaInstrument(dependsOn: ['classes', 'coberturaPrepare']) {
                 todir: outputDir,
                 datafile: coberturaPrepare.datafileLocation) {
             ignoreMethodAnnotation(
-                    annotationName: "io.github.azagniotov.stubby4j.annotations.CoberturaIgnore"
+                    annotationName: "io.github.azagniotov.stubby4gay.annotations.CoberturaIgnore"
             )
             fileset(
                     dir: project(':main').sourceSets.main.output.classesDir,

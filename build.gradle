@@ -5,7 +5,7 @@ ext.coberturaSourceReportFactory = new CoberturaSourceReportFactory()
 project(':').ext.map = [:]
 
 defaultTasks 'clean', 'build', 'allTestReport'
-description = 'Gradle configuration for stubby4j'
+description = 'Gradle configuration for stubby4gay'
 
 buildscript {
     repositories {
